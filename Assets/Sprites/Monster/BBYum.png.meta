@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 3e77b6c80c3377548a97b4178c9827e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4669869719236152312
+    second: BBYum_0
+  - first:
+      213: 7985021190430927787
+    second: BBYum_1
+  - first:
+      213: 5027117792579449233
+    second: BBYum_2
+  - first:
+      213: -876460303092516643
+    second: BBYum_3
+  - first:
+      213: 7655008195909150415
+    second: BBYum_4
+  - first:
+      213: -6891694645326033194
+    second: BBYum_5
+  - first:
+      213: 5552947320850337633
+    second: BBYum_6
+  - first:
+      213: 3285177921383274111
+    second: BBYum_7
+  - first:
+      213: 7299865145992123230
+    second: BBYum_8
+  - first:
+      213: 7926488897595059124
+    second: BBYum_9
+  - first:
+      213: -3322438461749153796
+    second: BBYum_10
+  - first:
+      213: -9013490750947851143
+    second: BBYum_11
+  - first:
+      213: 7909948363578445154
+    second: BBYum_12
+  - first:
+      213: -6191416606057869834
+    second: BBYum_13
+  - first:
+      213: 4158227756623123696
+    second: BBYum_14
+  - first:
+      213: -7967629647698951220
+    second: BBYum_15
+  - first:
+      213: 6940020608027253466
+    second: BBYum_16
+  - first:
+      213: 3578062475374241293
+    second: BBYum_17
+  - first:
+      213: 8219993432712973800
+    second: BBYum_18
+  - first:
+      213: -3933396508094474021
+    second: BBYum_19
+  - first:
+      213: 5633777334059084796
+    second: BBYum_20
+  - first:
+      213: 8860821988318304959
+    second: BBYum_21
+  - first:
+      213: -7238726684094904495
+    second: BBYum_22
+  - first:
+      213: 777652610752157417
+    second: BBYum_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BBYum_0
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 3573
+        width: 809
+        height: 757
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb8c6284c5bec040800000000000000
+      internalID: 4669869719236152312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_1
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 3573
+        width: 809
+        height: 757
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab2a9b577e70de60800000000000000
+      internalID: 7985021190430927787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_2
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 3573
+        width: 812
+        height: 757
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1917ebe5ff8e3c540800000000000000
+      internalID: 5027117792579449233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_3
+      rect:
+        serializedVersion: 2
+        x: 3742
+        y: 3573
+        width: 812
+        height: 757
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8707e7fff26d3f0800000000000000
+      internalID: -876460303092516643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_4
+      rect:
+        serializedVersion: 2
+        x: 4931
+        y: 3573
+        width: 813
+        height: 757
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc66edd656d0c3a60800000000000000
+      internalID: 7655008195909150415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_5
+      rect:
+        serializedVersion: 2
+        x: 6124
+        y: 3573
+        width: 809
+        height: 757
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de41ecdb38cb50a0800000000000000
+      internalID: -6891694645326033194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2402
+        width: 892
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fcdb3ea28001d40800000000000000
+      internalID: 5552947320850337633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_7
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 2402
+        width: 890
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f769104f9eb479d20800000000000000
+      internalID: 3285177921383274111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_8
+      rect:
+        serializedVersion: 2
+        x: 2452
+        y: 2402
+        width: 889
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e539d178ca45e4560800000000000000
+      internalID: 7299865145992123230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_9
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 2402
+        width: 889
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb2b31f7ab800e60800000000000000
+      internalID: 7926488897595059124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_10
+      rect:
+        serializedVersion: 2
+        x: 5126
+        y: 2398
+        width: 628
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffa85372d354e1d0800000000000000
+      internalID: -3322438461749153796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_11
+      rect:
+        serializedVersion: 2
+        x: 6322
+        y: 2398
+        width: 625
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9740c73eae5a9e280800000000000000
+      internalID: -9013490750947851143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_12
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1206
+        width: 624
+        height: 778
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d86c2c028c5cd60800000000000000
+      internalID: 7909948363578445154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_13
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 1206
+        width: 624
+        height: 778
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd477b766ba31aa0800000000000000
+      internalID: -6191416606057869834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_14
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 1206
+        width: 624
+        height: 778
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4d0b80d1ef4b930800000000000000
+      internalID: 4158227756623123696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_15
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 1206
+        width: 624
+        height: 732
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3880bbc0b4d6190800000000000000
+      internalID: -7967629647698951220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_16
+      rect:
+        serializedVersion: 2
+        x: 5078
+        y: 1206
+        width: 673
+        height: 690
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adada5329f7ef4060800000000000000
+      internalID: 6940020608027253466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_17
+      rect:
+        serializedVersion: 2
+        x: 6274
+        y: 1206
+        width: 673
+        height: 690
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0626dc2dd4d7a130800000000000000
+      internalID: 3578062475374241293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_18
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 17
+        width: 673
+        height: 691
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed86e4c978431270800000000000000
+      internalID: 8219993432712973800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_19
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 17
+        width: 674
+        height: 691
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8544647b4c969c0800000000000000
+      internalID: -3933396508094474021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_20
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 17
+        width: 673
+        height: 691
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb2d34e2a23f2e40800000000000000
+      internalID: 5633777334059084796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_21
+      rect:
+        serializedVersion: 2
+        x: 3902
+        y: 17
+        width: 670
+        height: 691
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbadea7d6a6f7fa70800000000000000
+      internalID: 8860821988318304959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_22
+      rect:
+        serializedVersion: 2
+        x: 5078
+        y: 17
+        width: 673
+        height: 691
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157c168ee60ea8b90800000000000000
+      internalID: -7238726684094904495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BBYum_23
+      rect:
+        serializedVersion: 2
+        x: 6274
+        y: 17
+        width: 673
+        height: 691
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e69986ede6caca00800000000000000
+      internalID: 777652610752157417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
