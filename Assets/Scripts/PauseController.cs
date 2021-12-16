@@ -9,7 +9,6 @@ public class PauseController : MonoBehaviour
 {
     public bool paused = false;
     public GameObject pauseObj;
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -27,10 +26,20 @@ public class PauseController : MonoBehaviour
             Time.timeScale = 1f;
             pauseObj.SetActive(false);
         }
+
+
+        if (Application.isEditor)
+        {
+            //ResetLevel();
+        }
     }
 
     public void ResetLevel()
     {
+        MonsterController monster = FindObjectOfType<MonsterController>();
+        monster.RestoreStats();
+        monster.SaveStats();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -38,13 +47,33 @@ public class PauseController : MonoBehaviour
     public Slider soundSlider;
     public AudioMixer masterMixer;
 
+    private void OnEnable()
+    {
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            masterMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
+            masterMixer.SetFloat("SoundVolume", PlayerPrefs.GetFloat("SoundVolume"));
+            musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+            soundSlider.value = PlayerPrefs.GetFloat("SoundVolume");
+        }
+    }
+
+    private void OnDisable()
+    {
+        PlayerPrefs.SetFloat("MusicVolume", musicSlider.value);
+        PlayerPrefs.SetFloat("SoundVolume", soundSlider.value);
+    }
+
     public void ChangeMusicVolume()
     {
         masterMixer.SetFloat("MusicVolume", musicSlider.value);
+        //PlayerPrefs.SetFloat("MusicVolume", musicSlider.value);
     }
 
     public void ChangeSoundVolume()
     {
         masterMixer.SetFloat("SoundVolume", soundSlider.value);
+        //PlayerPrefs.SetFloat("SoundVolume", soundSlider.value);
     }
+
 }

@@ -20,6 +20,8 @@ public class SpawnItem : MonoBehaviour
     public float waitTime = 0.125f;
     public SpriteRenderer itemShow;
 
+    public bool on = true;
+
     private void Awake()
     {
         rend = GetComponent<SpriteRenderer>();
@@ -30,14 +32,19 @@ public class SpawnItem : MonoBehaviour
 
     private void Update()
     {
-        if (curCooldown > 0) curCooldown -= Time.deltaTime;
-
-        if (Input.GetMouseButtonDown(0) && mousedOver && curCooldown <= 0)
+        if (on)
         {
-            //Spawn();
-            //CancelInvoke();
-            if (otherClip) Invoke("OtherClip", waitTime);
-            Invoke("Spawn", warmup);
+
+            if (curCooldown > 0) curCooldown -= Time.deltaTime;
+
+            if (Input.GetMouseButtonDown(0) && mousedOver && curCooldown <= 0)
+            {
+                //Spawn();
+                //CancelInvoke();
+                if (otherClip) Invoke("OtherClip", waitTime);
+                Invoke("Spawn", warmup);
+            }
+
         }
     }
 

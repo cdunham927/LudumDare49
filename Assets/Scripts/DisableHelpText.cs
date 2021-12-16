@@ -12,6 +12,11 @@ public class DisableHelpText : MonoBehaviour
         Invoke("Disable", waitTime);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P)) Disable();
+    }
+
     public void Disable()
     {
         obj.SetActive(false);

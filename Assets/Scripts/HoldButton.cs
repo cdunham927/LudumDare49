@@ -16,6 +16,8 @@ public class HoldButton : MonoBehaviour
     public GameObject fillBar;
     public float maxScale;
 
+    public bool on = true;
+
     private void Awake()
     {
         rend = GetComponent<SpriteRenderer>();
@@ -25,15 +27,18 @@ public class HoldButton : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && mousedOver)
+        if (on)
         {
-            curWarmup += Time.deltaTime;
+            if (Input.GetMouseButton(0) && mousedOver)
+            {
+                curWarmup += Time.deltaTime;
+            }
+            else curWarmup = 0f;
+
+            if (curWarmup > warmup) Spawn();
+
+            fillBar.transform.localScale = new Vector3(fillBar.transform.localScale.x, (curWarmup / warmup) * maxScale, 1);
         }
-        else curWarmup = 0f;
-
-        if (curWarmup > warmup) Spawn();
-
-        fillBar.transform.localScale = new Vector3(fillBar.transform.localScale.x, (curWarmup / warmup) * maxScale, 1);
     }
 
     private void OnMouseEnter()

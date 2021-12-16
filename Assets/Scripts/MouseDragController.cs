@@ -18,13 +18,18 @@ public class MouseDragController : MonoBehaviour
     public Image inventoryHighlight;
     public Color highlightColor;
 
+    IncineratorController incinerator;
+    bool mousedOverIncinerator;
+
     private void Awake()
     {
+        incinerator = FindObjectOfType<IncineratorController>();
         inventoryHighlight.color = Color.white;
     }
 
     void LateUpdate()
     {
+        mousedOverIncinerator = incinerator.MousedOver();
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (selectedObject)
@@ -47,13 +52,19 @@ public class MouseDragController : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(0) && selectedObject)
+        if (Input.GetMouseButtonUp(0) && selectedObject && !mousedOverIncinerator)
         {
             inventoryHighlight.color = Color.white;
             selectedObject.velocity = Vector2.zero;
             selectedObject.GetComponent<Collider2D>().isTrigger = false;
             selectedObject.AddForce(mouseForce, ForceMode2D.Impulse);
             selectedObject = null;
+
+            //We drop the item here, we can probably destroy it with the incinerator here
+            //
+            //
+            //
+
         }
     }
 

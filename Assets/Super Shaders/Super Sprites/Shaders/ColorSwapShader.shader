@@ -61,22 +61,22 @@
 				fixed4 c = SampleSpriteTexture(IN.texcoord) * IN.color;
 
 				// color swap a
-				if (c.r >= _SourceA.r - 0.005 && c.r <= _SourceA.r + 0.005 && c.g >= _SourceA.g - 0.005 &&
-					c.g <= _SourceA.g + 0.005 && c.b >= _SourceA.b - 0.005 && c.b <= _SourceA.b + 0.005)
+				if (c.r >= _SourceA.r - 0.2 && c.r <= _SourceA.r + 0.2 && c.g >= _SourceA.g - 0.2 &&
+					c.g <= _SourceA.g + 0.2 && c.b >= _SourceA.b - 0.2 && c.b <= _SourceA.b + 0.2)
 				{
 					c.rgb = _TargetA.rgb;
 				}
 
 				// color swap b
-				if (c.r >= _SourceB.r - 0.005 && c.r <= _SourceB.r + 0.005 && c.g >= _SourceB.g - 0.005 &&
-					c.g <= _SourceB.g + 0.005 && c.b >= _SourceB.b - 0.005 && c.b <= _SourceB.b + 0.005)
+				if (c.r >= _SourceB.r - 0.2 && c.r <= _SourceB.r + 0.2 && c.g >= _SourceB.g - 0.2 &&
+					c.g <= _SourceB.g + 0.2 && c.b >= _SourceB.b - 0.2 && c.b <= _SourceB.b + 0.2)
 				{
 					c.rgb = _TargetB.rgb;
 				}
 
 				// color swap c
-				if (c.r >= _SourceC.r - 0.005 && c.r <= _SourceC.r + 0.005 && c.g >= _SourceC.g - 0.005 &&
-					c.g <= _SourceC.g + 0.005 && c.b >= _SourceC.b - 0.005 && c.b <= _SourceC.b + 0.005)
+				if (c.r >= _SourceC.r - 0.2 && c.r <= _SourceC.r + 0.2 && c.g >= _SourceC.g - 0.2 &&
+					c.g <= _SourceC.g + 0.2 && c.b >= _SourceC.b - 0.2 && c.b <= _SourceC.b + 0.2)
 				{
 					c.rgb = _TargetC.rgb;
 				}

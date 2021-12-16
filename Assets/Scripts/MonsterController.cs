@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+//using System;
 
 public class MonsterController : MonoBehaviour
 {
@@ -127,31 +129,134 @@ public class MonsterController : MonoBehaviour
     public bool notPlayedDeath = true;
     AudioSource src;
 
+    System.DateTime currentDate;
+
+    //Hats hats hats
+    //
+    //
+    //
+    [Header("Hats")]
+    public List<GameObject> hats = new List<GameObject>();
+    //Experience
+    [Header("Experience/Leveling Up")]
+    public int level = 1;
+    public float experience;
+    public float expToNext;
+    public AnimationCurve expCurve = new AnimationCurve();
+    bool statsAdded = false;
+    public int hatTokens;
+
+    private void OnApplicationQuit()
+    {
+        SaveStats();
+    }
+
+    public void SaveStats()
+    {
+        PlayerPrefs.SetFloat("hunger", hunger);
+        PlayerPrefs.SetFloat("thirst", thirst);
+        PlayerPrefs.SetFloat("cleanliness", cleanliness);
+        PlayerPrefs.SetFloat("fun", fun);
+        PlayerPrefs.SetFloat("radiation", radiation);
+        PlayerPrefs.SetInt("dead", (hunger <= 0 || thirst <= 0 || cleanliness <= 0 || fun <= 0 || radiation <= 0) ? 0 : 1);
+        currentDate = System.DateTime.Today;
+        PlayerPrefs.SetString("Date", currentDate.ToString());
+        currentDate.CompareTo(System.DateTime.Today);
+    }
+
     private void Awake()
     {
-        notPlayedDeath = true;
-
-        petName = randomPetNames[Random.Range(0, randomPetNames.Length - 1)];
         rads = FindObjectOfType<MonsterRadius>();
         bod = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
         src = GetComponent<AudioSource>();
 
+        //InvokeRepeating("ShowAction", 0.01f, 7.5f);
+        InvokeRepeating("CheckStatus", 0.01f, 7.5f);
+
+
+        expToNext = CalculateExp(level);
+
+        for (int i = 1; i < 30; i++)
+        {
+            expCurve.AddKey(i, CalculateExp(i));
+        }
+    }
+
+    public float CalculateExp(int lvl)
+    {
+        float expNeeded = 0;
+
+        //expNeeded = lvl * 100f;
+        expNeeded = Mathf.RoundToInt(Mathf.Pow(8 * (lvl + 1), 1.6f));
+
+        return expNeeded;
+    }
+
+    public void AddExp(float amt)
+    {
+        experience += amt;
+
+        if (experience >= expToNext)
+        {
+            LevelUp();
+        }
+    }
+
+    public void LevelUp()
+    {
+        level++;
+        experience -= expToNext;
+
+        if (!statsAdded)
+        {
+            hatTokens += 1;
+            statsAdded = true;
+        }
+
+        Invoke("ResetAdded", 0.2f);
+        expToNext = CalculateExp(level);
+    }
+
+    void ResetAdded()
+    {
+        statsAdded = false;
+    }
+
+    private void OnEnable()
+    {
         RegularStatRate();
+
+        //RestoreStats();
+        LoadStats();
+    }
+
+    public void LoadStats()
+    {
+        hunger = PlayerPrefs.GetFloat("hunger", maxHunger);
+        thirst = PlayerPrefs.GetFloat("thirst", maxThirst);
+        cleanliness = PlayerPrefs.GetFloat("cleanliness", maxCleanliness);
+        fun = PlayerPrefs.GetFloat("fun", maxFun);
+        radiation = PlayerPrefs.GetFloat("radiation", maxRadiation);
+        DEAD = (PlayerPrefs.GetInt("dead", 0) == 0);
+    }
+
+    public void RestoreStats()
+    {
+        petName = randomPetNames[Random.Range(0, randomPetNames.Length - 1)];
+        notPlayedDeath = true;
+
+        curWantFoodTime = Random.Range(timeToWantFoodLow, timeToWantFoodHigh);
+        curShit = timeToShit;
+        noShitInQueue = true;
 
         RestoreHunger();
         RestoreThirst();
         RestoreCleanliness();
         RestoreFun();
         RestoreRadiation();
-
-        curWantFoodTime = Random.Range(timeToWantFoodLow, timeToWantFoodHigh);
-        curShit = timeToShit;
-        noShitInQueue = true;
-
-        //InvokeRepeating("ShowAction", 0.01f, 7.5f);
-        InvokeRepeating("CheckStatus", 0.01f, 7.5f);
+        DEAD = false;
     }
 
     public void RegularStatRate()
@@ -282,6 +387,10 @@ public class MonsterController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E)) FindObjectOfType<GameController>().PowerOutage();
             if (Input.GetKeyDown(KeyCode.O)) FindObjectOfType<GameController>().RestorePower();
             if (Input.GetKeyDown(KeyCode.N)) hunger -= 999;
+
+            //PlayerPrefs
+            if (Input.GetKeyDown(KeyCode.Period)) SaveStats();
+            if (Input.GetKeyDown(KeyCode.Comma)) RestoreStats();
         }
 
         //Debug.Log(bod.velocity.magnitude);
@@ -417,6 +526,12 @@ public class MonsterController : MonoBehaviour
         CheckStatus();
     }
 
+    public void CleanShit(float incAmt = 50f)
+    {
+        cleanliness += incAmt;
+        CheckStatus();
+    }
+
     public void PowerShower(float incAmt = 75f, float decAmt = 35f)
     {
         src.PlayOneShot(cleanClip);
@@ -517,5 +632,10 @@ public class MonsterController : MonoBehaviour
     public void RestoreRadiation()
     {
         radiation = maxRadiation;
+    }
+
+    public void GetHat()
+    {
+
     }
 }

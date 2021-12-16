@@ -7,15 +7,19 @@ namespace SuperShaders
     {
         [Header("Color A")]
         public Color sourceA = Color.blue;
-        public Color targetA = Color.red;
+        //public Color targetA = Color.red;
 
         [Header("Color B")]
         public Color sourceB = Color.blue;
-        public Color targetB = Color.red;
+        //public Color targetB = Color.red;
 
         [Header("Color C")]
         public Color sourceC = Color.blue;
-        public Color targetC = Color.red;
+        //public Color targetC = Color.red;
+
+        [Range(0, 6)]
+        public int curPallete;
+        public Color[] pallete1;
 
         private SpriteRenderer spriteRenderer;
 
@@ -43,13 +47,13 @@ namespace SuperShaders
             spriteRenderer.GetPropertyBlock(mpb);
 
             mpb.SetColor("_SourceA", enable ? sourceA : Color.blue);
-            mpb.SetColor("_TargetA", enable ? targetA : Color.red);
+            mpb.SetColor("_TargetA", enable ? pallete1[curPallete] : Color.red);
 
             mpb.SetColor("_SourceB", enable ? sourceB : Color.blue);
-            mpb.SetColor("_TargetB", enable ? targetB : Color.red);
+            mpb.SetColor("_TargetB", enable ? pallete1[curPallete] : Color.red);
 
             mpb.SetColor("_SourceC", enable ? sourceC : Color.blue);
-            mpb.SetColor("_TargetC", enable ? targetC : Color.red);
+            mpb.SetColor("_TargetC", enable ? pallete1[curPallete] : Color.red);
 
             spriteRenderer.SetPropertyBlock(mpb);
         }

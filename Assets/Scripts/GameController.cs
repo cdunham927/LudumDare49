@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
 
     public void PowerOutage()
     {
-        src.PlayOneShot(otherClip, 0.4f);
+        if (powerOn) src.PlayOneShot(otherClip, 0.3f);
         monster.PowerOutage();
         curElecTimer = 0;
         powerOn = false;

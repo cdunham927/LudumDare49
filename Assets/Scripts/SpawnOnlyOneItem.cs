@@ -17,6 +17,8 @@ public class SpawnOnlyOneItem : MonoBehaviour
     public AudioSource src;
     public Collider2D col;
 
+    public bool on = true;
+
     private void Awake()
     {
         src = GetComponent<AudioSource>();
@@ -26,24 +28,27 @@ public class SpawnOnlyOneItem : MonoBehaviour
     
     private void Update()
     {
-        if (curCooldown > 0) curCooldown -= Time.deltaTime;
-    
-        if (Input.GetMouseButtonDown(0) && mousedOver && curCooldown <= 0 && !alreadySpawned)
+        if (on)
         {
-            //Spawn();
-            //CancelInvoke();
-            Invoke("Spawn", warmup);
-        }
+            if (curCooldown > 0) curCooldown -= Time.deltaTime;
 
-        if (alreadySpawned)
-        {
-            col.enabled = true;
-            rend.sprite = clickSprite;
-        }
-        else
-        {
-            col.enabled = false;
-            rend.sprite = restSprite;
+            if (Input.GetMouseButtonDown(0) && mousedOver && curCooldown <= 0 && !alreadySpawned)
+            {
+                //Spawn();
+                //CancelInvoke();
+                Invoke("Spawn", warmup);
+            }
+
+            if (alreadySpawned)
+            {
+                col.enabled = true;
+                rend.sprite = clickSprite;
+            }
+            else
+            {
+                col.enabled = false;
+                rend.sprite = restSprite;
+            }
         }
     }
     

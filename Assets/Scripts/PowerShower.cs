@@ -13,6 +13,7 @@ public class PowerShower : MonoBehaviour
     public Sprite clickSprite;
     SpriteRenderer rend;
     public AudioSource src;
+    Vector3 lastMousePos;
 
     private void Awake()
     {
@@ -24,10 +25,16 @@ public class PowerShower : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && mousedOver)
         {
-            curWarmup += Time.deltaTime;
+            InvokeRepeating("CheckMouse", 0.01f, 0.1f);
+            if (Input.mousePosition.y < lastMousePos.y) curWarmup += Time.deltaTime;
         }
 
-        if (curWarmup > warmup) Spawn();
+        if (curWarmup >= warmup) Spawn();
+    }
+
+    void CheckMouse()
+    {
+        lastMousePos = Input.mousePosition;
     }
 
     private void OnMouseEnter()
@@ -43,6 +50,7 @@ public class PowerShower : MonoBehaviour
     private void OnMouseExit()
     {
         mousedOver = false;
+        //CancelInvoke();
     }
 
     public void ResetSprite()

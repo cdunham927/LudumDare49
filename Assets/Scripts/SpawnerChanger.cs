@@ -12,6 +12,8 @@ public class SpawnerChanger : MonoBehaviour
     SpriteRenderer rend;
     public AudioSource src;
 
+    public bool on = true;
+
     private void Awake()
     {
         src = GetComponent<AudioSource>();
@@ -20,7 +22,7 @@ public class SpawnerChanger : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && mousedOver) Change();
+        if (Input.GetMouseButtonDown(0) && mousedOver && on) Change();
     }
 
     public void Change()
